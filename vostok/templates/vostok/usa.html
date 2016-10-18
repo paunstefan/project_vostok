@@ -1,0 +1,12 @@
+{% extends "vostok/header.html" %}
+
+{% block content %}
+        <tbody>
+            <tr class="bold"><td>Flight</td><td>Crew</td><td>Date</td><td>Country</td></tr>
+            {% for flight in object_list %}
+            {% if flight.country == 'USA' %}
+            <tr><td class="bold">{{flight.name}}</td><td>{{flight.members}}</td><td>{{flight.date}}-{{flight.year}}</td><td>{{flight.country}}</td></tr>
+            {% endif %}
+            {% endfor %}
+        </tbody>
+{% endblock %}

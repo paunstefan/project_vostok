@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+  
+.my_link:link {
+    text-decoration: none;
+	color: white;
+}
+
+.my_link:visited {
+    text-decoration: none;
+	color: white;
+}
+
+.my_link:hover {
+    text-decoration: none;
+	color: blue;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.main_table {
+    margin-left: 5px;
+}

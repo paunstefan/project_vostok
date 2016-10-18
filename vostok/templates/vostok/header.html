@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Project Vostok</title>
+    <meta charset="utf-8" />
+    {% load staticfiles %}
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link rel="stylesheet" href="{% static 'vostok/css/stylesheet.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script type="text/javascript" src="{% static 'vostok/js/nav.js' %}"></script>
+</head>
+
+<body>
+    <header>
+    <nav class="light-blue light-blue darken-1" role = "navigation">
+    <div class="nav-wrapper container">
+      <a href="/" class="brand-logo">Project Vostok</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/usa">USA</a></li>
+        <li><a href="/russia">Russia</a></li>
+        <li><a href="/china">China</a></li>
+        <li><a href="/private">Private</a></li>
+      </ul>
+        
+    <ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
+        <li><a href="/">Home</a></li>
+        <li><a href="/usa">USA</a></li>
+        <li><a href="/russia">Russia</a></li>
+        <li><a href="/china">China</a></li>
+        <li><a href="/private">Private</a></li>
+    </ul>
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+    </nav>
+    </header>
+    
+    <main>
+    <div class="main_table">
+        <table class="striped">
+        {% block content %}
+        {% endblock %}
+        </table>
+    </div>
+    </main>
+    
+    <footer class="page-footer light-blue">
+    <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Project Vostok</h5>
+                <p class="grey-text text-lighten-4">This is a database of all human spaceflights.</p>
+                <p class="grey-text text-lighten-4">Work in progress</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="https://en.wikipedia.org/wiki/Human_spaceflight">Wikipedia Manned Spaceflight </a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://en.wikipedia.org/wiki/List_of_human_spaceflights">List of human spaceflight</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+                Made with <a class="my_link" href="https://www.djangoproject.com/">Django</a> and <a class="my_link" href="http://materializecss.com//">Materialize CSS</a> by paunstefan
+            </div>
+          </div>
+    </footer>
+
+</body>
+</html>
